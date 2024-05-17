@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultrasound Report Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        textarea {
+            width: 100%;
+            height: 50px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Ultrasound Report Form</h2>
+    <form id="ultrasoundForm">
+        <table>
+            <tr>
+                <th>Paciente:</th>
+                <td><input type="text" name="paciente"></td>
+                <th>RG:</th>
+                <td><input type="text" name="rg"></td>
+                <th>Raça:</th>
+                <td><input type="text" name="raca"></td>
+                <th>Espécie:</th>
+                <td>
+                    <select name="especie">
+                        <option value="can">Can</option>
+                        <option value="fel">Fel</option>
+                    </select>
+                </td>
+                <th>Sexo:</th>
+                <td>
+                    <select name="sexo">
+                        <option value="m">M</option>
+                        <option value="f">F</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Idade:</th>
+                <td>
+                    <input type="number" name="idade_anos" placeholder="Anos"> anos
+                    <input type="number" name="idade_meses" placeholder="Meses"> meses
+                </td>
+                <th>Proprietário:</th>
+                <td><input type="text" name="proprietario"></td>
+                <th>Veterinário requisitante:</th>
+                <td><input type="text" name="veterinario"></td>
+                <th>Data:</th>
+                <td><input type="date" name="data"></td>
+            </tr>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Estrutura</th>
+                    <th>Normal</th>
+                    <th>Anormal</th>
+                    <th>Não visibilizada</th>
+                    <th>Comentários</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fígado</td>
+                    <td><input type="checkbox" name="figado" class="normal"></td>
+                    <td><input type="checkbox" name="figado" class="anormal"></td>
+                    <td><input type="checkbox" name="figado" class="nao_visibilizada"></td>
+                    <td><textarea name="figado_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Vesícula biliar</td>
+                    <td><input type="checkbox" name="vesicula" class="normal"></td>
+                    <td><input type="checkbox" name="vesicula" class="anormal"></td>
+                    <td><input type="checkbox" name="vesicula" class="nao_visibilizada"></td>
+                    <td><textarea name="vesicula_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Baço</td>
+                    <td><input type="checkbox" name="baco" class="normal"></td>
+                    <td><input type="checkbox" name="baco" class="anormal"></td>
+                    <td><input type="checkbox" name="baco" class="nao_visibilizada"></td>
+                    <td><textarea name="baco_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Rim direito</td>
+                    <td><input type="checkbox" name="rim_direito" class="normal"></td>
+                    <td><input type="checkbox" name="rim_direito" class="anormal"></td>
+                    <td><input type="checkbox" name="rim_direito" class="nao_visibilizada"></td>
+                    <td><textarea name="rim_direito_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Rim esquerdo</td>
+                    <td><input type="checkbox" name="rim_esquerdo" class="normal"></td>
+                    <td><input type="checkbox" name="rim_esquerdo" class="anormal"></td>
+                    <td><input type="checkbox" name="rim_esquerdo" class="nao_visibilizada"></td>
+                    <td><textarea name="rim_esquerdo_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Bexiga</td>
+                    <td><input type="checkbox" name="bexiga" class="normal"></td>
+                    <td><input type="checkbox" name="bexiga" class="anormal"></td>
+                    <td><input type="checkbox" name="bexiga" class="nao_visibilizada"></td>
+                    <td><textarea name="bexiga_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Adrenal direita</td>
+                    <td><input type="checkbox" name="adrenal_direita" class="normal"></td>
+                    <td><input type="checkbox" name="adrenal_direita" class="anormal"></td>
+                    <td><input type="checkbox" name="adrenal_direita" class="nao_visibilizada"></td>
+                    <td><textarea name="adrenal_direita_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Adrenal esquerda</td>
+                    <td><input type="checkbox" name="adrenal_esquerda" class="normal"></td>
+                    <td><input type="checkbox" name="adrenal_esquerda" class="anormal"></td>
+                    <td><input type="checkbox" name="adrenal_esquerda" class="nao_visibilizada"></td>
+                    <td><textarea name="adrenal_esquerda_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Estômago</td>
+                    <td><input type="checkbox" name="estomago" class="normal"></td>
+                    <td><input type="checkbox" name="estomago" class="anormal"></td>
+                    <td><input type="checkbox" name="estomago" class="nao_visibilizada"></td>
+                    <td><textarea name="estomago_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Intestino delgado</td>
+                    <td><input type="checkbox" name="intestino_delgado" class="normal"></td>
+                    <td><input type="checkbox" name="intestino_delgado" class="anormal"></td>
+                    <td><input type="checkbox" name="intestino_delgado" class="nao_visibilizada"></td>
+                    <td><textarea name="intestino_delgado_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Cólon</td>
+                    <td><input type="checkbox" name="colon" class="normal"></td>
+                    <td><input type="checkbox" name="colon" class="anormal"></td>
+                    <td><input type="checkbox" name="colon" class="nao_visibilizada"></td>
+                    <td><textarea name="colon_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Pâncreas</td>
+                    <td><input type="checkbox" name="pancreas" class="normal"></td>
+                    <td><input type="checkbox" name="pancreas" class="anormal"></td>
+                    <td><input type="checkbox" name="pancreas" class="nao_visibilizada"></td>
+                    <td><textarea name="pancreas_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Peritônio</td>
+                    <td><input type="checkbox" name="peritonio" class="normal"></td>
+                    <td><input type="checkbox" name="peritonio" class="anormal"></td>
+                    <td><input type="checkbox" name="peritonio" class="nao_visibilizada"></td>
+                    <td><textarea name="peritonio_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Linfonodos</td>
+                    <td><input type="checkbox" name="linfonodos" class="normal"></td>
+                    <td><input type="checkbox" name="linfonodos" class="anormal"></td>
+                    <td><input type="checkbox" name="linfonodos" class="nao_visibilizada"></td>
+                    <td><textarea name="linfonodos_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Testículos</td>
+                    <td><input type="checkbox" name="testiculos" class="normal"></td>
+                    <td><input type="checkbox" name="testiculos" class="anormal"></td>
+                    <td><input type="checkbox" name="testiculos" class="nao_visibilizada"></td>
+                    <td><textarea name="testiculos_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Próstata</td>
+                    <td><input type="checkbox" name="prostata" class="normal"></td>
+                    <td><input type="checkbox" name="prostata" class="anormal"></td>
+                    <td><input type="checkbox" name="prostata" class="nao_visibilizada"></td>
+                    <td><textarea name="prostata_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Útero</td>
+                    <td><input type="checkbox" name="utero" class="normal"></td>
+                    <td><input type="checkbox" name="utero" class="anormal"></td>
+                    <td><input type="checkbox" name="utero" class="nao_visibilizada"></td>
+                    <td><textarea name="utero_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Ovários</td>
+                    <td><input type="checkbox" name="ovarios" class="normal"></td>
+                    <td><input type="checkbox" name="ovarios" class="anormal"></td>
+                    <td><input type="checkbox" name="ovarios" class="nao_visibilizada"></td>
+                    <td><textarea name="ovarios_comentarios"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Outros</td>
+                    <td><input type="checkbox" name="outros" class="normal"></td>
+                    <td><input type="checkbox" name="outros" class="anormal"></td>
+                    <td><input type="checkbox" name="outros" class="nao_visibilizada"></td>
+                    <td><textarea name="outros_comentarios"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Impressão diagnóstica:</h3>
+        <textarea name="impressao_diagnostica"></textarea>
+
+        <p>A análise isolada deste exame não tem valor diagnóstico se não for avaliada em conjunto com os dados
+            clínicos, epidemiológicos e outros exames complementares.</p>
+
+        <p>_____________________________<br>
+            Guilherme Adams<br>
+            Médico Veterinário CRMV-PR 13.625</p>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Ensure only one checkbox is selected per row
+            document.querySelectorAll('tbody tr').forEach(row => {
+                const checkboxes = row.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', () => {
+                        if (checkbox.checked) {
+                            checkboxes.forEach(box => {
+                                if (box !== checkbox) {
+                                    box.checked = false;
+                                }
+                            });
+                        }
+                    });
+                });
+            });
+
+            // Initialize all 'Normal' checkboxes to be checked
+            document.querySelectorAll('.normal').forEach(checkbox => {
+                checkbox.checked = true;
+            });
+        });
+    </script>
+</body>
+
+</html>
